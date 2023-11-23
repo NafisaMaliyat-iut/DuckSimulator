@@ -58,6 +58,7 @@ public class DuckSimulator {
     public static void main(String[] args) {
         DuckSimulator duckSimulator = new DuckSimulator();
         //select whether ducks have quack count
-        duckSimulator.simulate(new CountingDuckFactory());
+        AbstractDuckFactory factory = new CountingDuckFactory();
+        duckSimulator.simulate(factory);
     }
 }

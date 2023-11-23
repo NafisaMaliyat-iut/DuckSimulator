@@ -8,8 +8,8 @@ import java.util.List;
 
 //helper class of observable
 public class Observable implements QuackObservable {
-    List<Observer> observers = new ArrayList<>();
-    QuackObservable duck;
+    private List<Observer> observers = new ArrayList<>();
+    private QuackObservable duck;
 
     public Observable(AbstractDuck duck){
         this.duck = duck;
