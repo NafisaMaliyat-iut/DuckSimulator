@@ -1,6 +1,6 @@
 package ObserverPattern;
 
-import Ducks.Duck;
+import Ducks.AbstractDuck;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -11,7 +11,7 @@ public class Observable implements QuackObservable {
     List<Observer> observers = new ArrayList<>();
     QuackObservable duck;
 
-    public Observable(Duck duck){
+    public Observable(AbstractDuck duck){
         this.duck = duck;
     }
 

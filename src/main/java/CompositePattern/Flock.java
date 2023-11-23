@@ -1,22 +1,22 @@
 package CompositePattern;
 
-import Ducks.Duck;
+import Ducks.AbstractDuck;
 import ObserverPattern.Observer;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Flock extends Duck{
-    private List<Duck> ducks = new ArrayList<>();
+public class Flock extends AbstractDuck {
+    private List<AbstractDuck> ducks = new ArrayList<>();
 
-    public void addDuck(Duck duck) {
+    public void addDuck(AbstractDuck duck) {
         ducks.add(duck);
     }
 
     @Override
     public void registerObserver(Observer observer) {
-        Iterator<Duck> iterator = ducks.iterator();
+        Iterator<AbstractDuck> iterator = ducks.iterator();
         while (iterator.hasNext()) {
             iterator.next().registerObserver(observer);
         }
@@ -24,7 +24,7 @@ public class Flock extends Duck{
 
     @Override
     public void removeObserver(Observer observer) {
-        Iterator<Duck> iterator = ducks.iterator();
+        Iterator<AbstractDuck> iterator = ducks.iterator();
         while (iterator.hasNext()) {
             iterator.next().removeObserver(observer);
         }
@@ -33,7 +33,7 @@ public class Flock extends Duck{
     @Override
     public void quack() {
         System.out.println("Flock is quacking: ");
-        Iterator<Duck> iterator = ducks.iterator();
+        Iterator<AbstractDuck> iterator = ducks.iterator();
         while (iterator.hasNext()) {
             iterator.next().quack();
         }
@@ -42,7 +42,7 @@ public class Flock extends Duck{
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        Iterator<Duck> iterator = ducks.iterator();
+        Iterator<AbstractDuck> iterator = ducks.iterator();
         while (iterator.hasNext()) {
             stringBuilder.append(iterator.next().toString() + "\n") ;
         }

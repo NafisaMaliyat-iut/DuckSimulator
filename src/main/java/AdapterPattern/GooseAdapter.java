@@ -1,8 +1,8 @@
 package AdapterPattern;
 
-import Ducks.Duck;
+import Ducks.AbstractDuck;
 
-public class GooseAdapter extends Duck {
+public class GooseAdapter extends AbstractDuck {
     private Goose goose;
 
     public GooseAdapter(Goose goose) {

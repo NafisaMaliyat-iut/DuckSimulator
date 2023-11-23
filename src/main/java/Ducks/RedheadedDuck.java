@@ -1,6 +1,6 @@
 package Ducks;
 
-public class RedheadedDuck extends Duck {
+public class RedheadedDuck extends AbstractDuck {
 
     @Override
     public String toString() {

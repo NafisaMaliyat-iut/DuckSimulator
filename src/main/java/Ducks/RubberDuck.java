@@ -1,15 +1,14 @@
 package Ducks;
 
-public class MallardDuck extends AbstractDuck {
-
+public class RubberDuck extends AbstractDuck{
     @Override
     public String toString() {
-        return "Mallard Duck";
+        return "Rubber Duck";
     }
 
     @Override
     public void quack() {
-        System.out.println("Mallard duck is quacking");
+        System.out.println("Rubber duck is quacking");
         super.notifyObservers();
     }
 }

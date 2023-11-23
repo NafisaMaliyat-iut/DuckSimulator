@@ -1,13 +1,13 @@
 package DecoratorPattern;
 
-import Ducks.Duck;
+import Ducks.AbstractDuck;
 
 // QuackCounter decorator
-public class QuackCounter extends Duck {
-    private Duck duck;
+public class QuackCounter extends AbstractDuck {
+    private AbstractDuck duck;
     private static int quackCount = 0;
 
-    public QuackCounter(Duck duck) {
+    public QuackCounter(AbstractDuck duck) {
         this.duck = duck;
     }
 

@@ -1,16 +1,24 @@
 package FactoryPattern;
 
-import Ducks.Duck;
+import Ducks.AbstractDuck;
 import Ducks.MallardDuck;
 import Ducks.RedheadedDuck;
+import Ducks.RubberDuck;
 
 public class DuckFactory implements AbstractDuckFactory {
 
-    public Duck createMallardDuck() {
+    @Override
+    public AbstractDuck createMallardDuck() {
         return new MallardDuck();
     }
 
-    public Duck createRedHeadedDuck() {
+    @Override
+    public AbstractDuck createRedHeadedDuck() {
         return new RedheadedDuck();
+    }
+
+    @Override
+    public AbstractDuck createRubberDuck() {
+        return new RubberDuck();
     }
 }

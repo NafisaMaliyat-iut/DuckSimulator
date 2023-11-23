@@ -1,8 +1,9 @@
 package FactoryPattern;
 
-import Ducks.Duck;
+import Ducks.AbstractDuck;
 
 public interface AbstractDuckFactory {
-    public Duck createMallardDuck();
-    public Duck createRedHeadedDuck();
+    public AbstractDuck createMallardDuck();
+    public AbstractDuck createRedHeadedDuck();
+    public AbstractDuck createRubberDuck();
 }
